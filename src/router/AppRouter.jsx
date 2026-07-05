@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Layout } from "../components/layout/Layout";
+import WebsiteLayout from "../components/layout/WebsiteLayout";
+import DashboardLayout from "../components/layout/DashboardLayout";
+
 import Home from "../pages/Home";
 import { About } from "../pages/About";
 import { Contact } from "../pages/Contact";
@@ -15,12 +17,16 @@ import CostCalculatorPage from "../pages/CostCalculatorPage";
 export function AppRouter() {
   return (
     <Routes>
-      <Route element={<Layout />}>
+      {/* Website */}
+      <Route element={<WebsiteLayout />}>
         <Route index element={<Home />} />
-
-        <Route path="plans" element={<Plans />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+      </Route>
+
+      {/* Dashboard */}
+      <Route element={<DashboardLayout />}>
+        <Route path="plans" element={<Plans />} />
         <Route path="favorites" element={<Favorites />} />
         <Route path="cost-calculator" element={<CostCalculatorPage />} />
         <Route path="cart" element={<Cart />} />
@@ -39,5 +45,3 @@ export function AppRouter() {
     </Routes>
   );
 }
-
-
