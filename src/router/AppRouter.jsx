@@ -22,7 +22,7 @@ export function AppRouter() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="favorites" element={<Favorites />} />
-        <Route path="cost-calculator" element={<CostCalculatorPage />} />
+        <Route path="pricing" element={<CostCalculatorPage />} />
         <Route path="cart" element={<Cart />} />
 
         <Route
