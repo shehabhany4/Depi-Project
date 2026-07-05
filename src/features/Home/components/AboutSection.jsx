@@ -1,5 +1,5 @@
 import { ABOUT_SERVICES } from "../constants";
-
+import { Link } from "react-router-dom";
 function cn(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -33,8 +33,8 @@ export default function AboutSection() {
           <p className="mb-6 max-w-[380px] text-[15px] leading-[1.75] text-[var(--paragraph)] font-[var(--second-font)]">
             Homi is an architectural platform that connects you with
             professional home designs and engineering solutions. We make the
-            journey of building your dream home simpler — from choosing the right
-            design to understanding your construction budget.
+            journey of building your dream home simpler — from choosing the
+            right design to understanding your construction budget.
           </p>
 
           <ul className="list-none p-0 m-0 mb-8 flex flex-col gap-2.5">
@@ -58,8 +58,10 @@ export default function AboutSection() {
             className="group relative inline-flex items-center gap-2.5 self-start bg-[var(--brand-primary)] text-white font-semibold text-[14px] px-7 py-3.5 rounded-lg overflow-hidden transition-[gap] duration-300 hover:gap-3.5 font-[var(--second-font)]"
           >
             <span className="absolute inset-0 bg-[var(--brand-primary-hover)] -translate-x-[101%] transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0" />
-            <span className="relative z-10">Homi Team</span>
-            <i className="fa-solid fa-arrow-right relative z-10" />
+            <Link to="/About">
+              <span className="relative z-10">Homi Team</span>
+              <i className="fa-solid fa-arrow-right relative z-10" />
+            </Link>
           </a>
         </div>
 
