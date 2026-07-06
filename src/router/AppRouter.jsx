@@ -13,6 +13,7 @@ import { Favorites } from "../pages/Favorites";
 import { NotFound } from "../pages/NotFound";
 import { ProtectedRoute } from "./ProtectedRoute";
 import CostCalculatorPage from "../pages/CostCalculatorPage";
+import PlanDetails from "../pages/PlanDetails";
 
 export function AppRouter() {
   return (
@@ -27,6 +28,8 @@ export function AppRouter() {
       {/* Dashboard */}
       <Route element={<DashboardLayout />}>
         <Route path="plans" element={<Plans />} />
+        <Route path="plan-details" element={<PlanDetails />} />
+        <Route path="plan-details/:id" element={<PlanDetails />} />
         <Route path="favorites" element={<Favorites />} />
         <Route path="cost-calculator" element={<CostCalculatorPage />} />
         <Route path="cart" element={<Cart />} />
