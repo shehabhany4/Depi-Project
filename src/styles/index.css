@@ -6,11 +6,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --first-font: "Montserrat", sans-serif;
-  --second-font: "Inter", sans-serif;
-  --brand-primary: #008080;
-  --brand-primary-hover: #006666;
-  --brand-primary-light: #33b3b3;
+  --first-font: "Manrope", sans-serif;
+  --second-font: "Manrope", sans-serif;
+  --brand-primary: #19C7C2;
+  --brand-primary-hover: #15A8A4;
+  --brand-primary-light: #4FE3DA;
   --brand-secondary: #1a1a1a;
   --brand-secondary-light: #333333;
   --body-bg: #f8f9fa;
@@ -59,10 +59,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  /* ============================================
+  /* /* ============================================
    DARK INPUTS (Login, Auth pages)
    ============================================ */
-  .dark-input:-webkit-autofill,
+  /* .dark-input:-webkit-autofill,
   .dark-input:-webkit-autofill:hover,
   .dark-input:-webkit-autofill:focus,
   .dark-input:-webkit-autofill:active,
@@ -77,6 +77,26 @@
     -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.05) inset !important;
     -webkit-text-fill-color: white !important;
     caret-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+  } */
+  .dark-input:-webkit-autofill,
+  .dark-input:-webkit-autofill:hover,
+  .dark-input:-webkit-autofill:focus,
+  .dark-input:-webkit-autofill:active,
+  .dark-textarea:-webkit-autofill,
+  .dark-textarea:-webkit-autofill:hover,
+  .dark-textarea:-webkit-autofill:focus,
+  .dark-textarea:-webkit-autofill:active,
+  .dark-select:-webkit-autofill,
+  .dark-select:-webkit-autofill:hover,
+  .dark-select:-webkit-autofill:focus,
+  .dark-select:-webkit-autofill:active {
+    /* 🎨 WHITE THEME: was rgba(255,255,255,0.05) + white text —
+     flipped to match the light card background + dark text,
+     otherwise autofilled text was invisible (white-on-white). */
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.03) inset !important;
+    -webkit-text-fill-color: #111827 !important; /* matches text-gray-900 */
+    caret-color: #111827;
     transition: background-color 5000s ease-in-out 0s;
   }
 
@@ -198,6 +218,7 @@ code {
 
 @theme inline {
   --font-heading: var(--font-sans);
+  --font-serif: "DM Serif Display", Georgia, serif;
   --font-sans: "Geist Variable", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -286,8 +307,9 @@ code {
   --color-surface-variant: #dbe4ed;
   --color-on-primary: #ffffff;
 
+  --font-accent: "Cormorant Garamond", Georgia, serif;
   --font-headline: "Montserrat", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-body: "Manrope", sans-serif;
 
   --spacing-gutter: 32px;
   --spacing-section-gap: 120px;
@@ -296,6 +318,21 @@ code {
 
   --width-container: 1440px;
   --width-container-max: 1440px;
+}
+
+.font-serif {
+  font-family: "DM Serif Display", Georgia, serif;
+}
+
+.font-accent {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.06em;
+}
+
+.font-body {
+  font-family: "Manrope", sans-serif;
 }
 
 :root {
@@ -378,7 +415,8 @@ code {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #0B0F14;
   }
   html {
     @apply font-sans;
@@ -471,6 +509,7 @@ code {
   animation: stepFadeIn 0.35s ease-out;
 }
 
+<<<<<<< HEAD
 /* ================================================================
    COST CALCULATOR — PREMIUM UI ANIMATIONS
    ================================================================ */
@@ -820,4 +859,47 @@ code {
 
 .cc-icon-bounce:hover {
   animation: ccIconBounce 0.6s ease-in-out;
+=======
+.text-gradient-glow {
+  background: linear-gradient(135deg, #19C7C2, #4FE3DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(25, 199, 194, 0.25));
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, #19C7C2, #4FE3DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.badge-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(25, 199, 194, 0.4);
+  box-shadow: 0 0 8px rgba(25, 199, 194, 0.3);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+@keyframes shimmer-glow {
+  0%, 85%, 100% {
+    filter: drop-shadow(0 0 8px rgba(25, 199, 194, 0.2));
+  }
+  92% {
+    filter: drop-shadow(0 0 18px rgba(25, 199, 194, 0.5)) brightness(1.08);
+  }
+}
+
+.shimmer-glow {
+  animation: shimmer-glow 6s ease-in-out 1 forwards;
+>>>>>>> e643cd17d834f31dda68613b868f138e2b3c008d
 }
