@@ -8,9 +8,9 @@
 :root {
   --first-font: "Manrope", sans-serif;
   --second-font: "Manrope", sans-serif;
-  --brand-primary: #19C7C2;
-  --brand-primary-hover: #15A8A4;
-  --brand-primary-light: #4FE3DA;
+  --brand-primary: #19c7c2;
+  --brand-primary-hover: #15a8a4;
+  --brand-primary-light: #4fe3da;
   --brand-secondary: #1a1a1a;
   --brand-secondary-light: #333333;
   --body-bg: #f8f9fa;
@@ -416,7 +416,7 @@ code {
   }
   body {
     @apply text-foreground;
-    background-color: #0B0F14;
+    background-color: #0b0f14;
   }
   html {
     @apply font-sans;
@@ -510,7 +510,7 @@ code {
 }
 
 .text-gradient-glow {
-  background: linear-gradient(135deg, #19C7C2, #4FE3DA);
+  background: linear-gradient(135deg, #19c7c2, #4fe3da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -518,7 +518,7 @@ code {
 }
 
 .text-gradient-teal {
-  background: linear-gradient(135deg, #19C7C2, #4FE3DA);
+  background: linear-gradient(135deg, #19c7c2, #4fe3da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -540,7 +540,9 @@ code {
 }
 
 @keyframes shimmer-glow {
-  0%, 85%, 100% {
+  0%,
+  85%,
+  100% {
     filter: drop-shadow(0 0 8px rgba(25, 199, 194, 0.2));
   }
   92% {
