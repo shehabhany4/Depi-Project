@@ -6,6 +6,8 @@ import TestimonialSection from "@/features/Home/components/TestimonialSection";
 import PropertyCarousel from "@/features/Home/components/PropertyCarousel";
 import planImg from "/src/assets/images/plans/1.png";
 import homeImg from "/src/assets/images/homes/Picture_1.avif";
+import topImg from "/src/assets/images/homes/Picture_3.avif";
+import bottomImg from "/src/assets/images/homes/Picture_4.avif";
 import CtaSection from "@/features/Home/components/CtaSection";
 
 const fadeUp = {
@@ -24,8 +26,8 @@ export default function Home() {
         authorName="Sarah Mitchell"
         authorTitle="Founder & Lead Architect"
         authorImage="/src/assets/images/homes/Picture_2.avif"
-        topImage="/src/assets/images/homes/Picture_3.avif"
-        bottomImage="/src/assets/images/homes/Picture_4.avif"
+        topImage={topImg}
+        bottomImage={bottomImg}
         backgroundColor="#f6f8fa"
       />
 
