@@ -591,7 +591,7 @@ export default function HousePlanCard({ plan }) {
             className="w-full mt-2 bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
           >
             <ShoppingCart size={16} />
-            Add to Cart
+            Add this paln
           </button>
         ) : plan.status === "sold_out" ? (
           <button

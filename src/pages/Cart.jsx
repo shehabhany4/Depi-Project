@@ -48,7 +48,7 @@ export function Cart() {
           </p>
           <button
             onClick={() => navigate("/plans")}
-            className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl font-medium transition-colors"
+            className="bg-teal-600 hover:bg-teal-700 text-white px-8  py-3 rounded-xl font-medium transition-colors mt-5"
           >
             Browse Plans
           </button>
@@ -121,8 +121,8 @@ export function Cart() {
                   </span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Delivery Fee</span>
-                  <span className="text-green-600 font-medium">Free</span>
+                  <span className="text-gray-500">Delivery  </span>
+                  <span className="text-green-600 font-medium">Digital</span>
                 </div>
                 <div className="flex justify-between text-lg font-bold pt-3 border-t border-gray-200">
                   <span>Total</span>

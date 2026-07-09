@@ -93,7 +93,7 @@ export default function OrdersPage() {
           </p>
           <button
             onClick={() => navigate("/plans")}
-            className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl font-medium transition-colors"
+            className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl font-medium transition-colors mt-5"
           >
             Browse Plans
           </button>
